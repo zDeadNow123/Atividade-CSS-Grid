@@ -1,0 +1,81 @@
+@import url("https://meyerweb.com/eric/tools/css/reset/reset.css");
+
+body {
+    height: 100vh;
+    background-color: darkgrey;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+.container {
+    display: grid;
+    grid-gap: 10px;
+
+    height: 100%;
+    width: 100%;
+
+    grid-template: 10% 80% 10% / 100%;
+    grid-template-areas: "h h h" "s s s" "f f f";
+}
+
+.container .c-header {
+    grid-area: h;
+    background-color: #f5f5f5;
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.container .c-header nav {
+    background-color: black;
+
+    width: 500px;
+    height: 50px;
+
+    margin: 10px;
+}
+
+section {
+    grid-area: s;
+    background-color: dodgerblue;
+
+    display: grid;
+    grid-template: 10% 80% 10% / 100%;
+    grid-template-areas: "sh sh sh sa" "sar sar sar sa" "sf sf sf sa";
+    
+    padding: 10px;
+}
+
+section * {
+    margin: 5px;
+}
+
+section header {
+    grid-area: sh;
+    background-color: hotpink;
+}
+
+section article {
+    grid-area: sar;
+    background-color: navy;
+}
+
+section footer {
+    grid-area: sf;
+    background-color: darkgoldenrod;
+}
+
+section aside {
+    grid-area: sa;
+    background-color: green;
+}
+
+.container .c-footer {
+    background-color: red;
+    grid-area: f;
+}

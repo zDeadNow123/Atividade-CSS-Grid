@@ -1,0 +1,75 @@
+@import url("https://meyerweb.com/eric/tools/css/reset/reset.css");
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 10px;
+}
+
+.container * {
+    border: 1px solid #000;
+}
+
+.container {
+    display: grid;
+
+    width: 100%;
+    height: 100%;
+
+    grid-gap: 6px;
+    padding: 20px;
+    grid-template: 10% 80% 10% / 10% 80% 10%;
+    grid-template-areas: "h h h"
+                         "n s a"                     
+                         "f f f";
+}
+
+header {
+    background-color: aqua;
+    grid-area: h;
+}
+
+nav {
+    background-color: greenyellow;
+    grid-area: n;
+}
+
+section {
+    background-color: yellow;
+    display: grid;
+
+    grid-gap: 6px;
+    padding: 20px;
+
+    grid-template: 10% 80% 10% / 10% 80% 10%;
+    grid-template-areas: "sh sh sh"
+                         "sa sa sa"
+                         "sf sf sf";
+}
+
+section header {
+    background-color: aquamarine;
+    grid-area: sh;
+}
+
+section article {
+    background-color: blueviolet;
+    grid-area: sa;
+}
+
+section footer {
+    background-color: coral;
+    grid-area: sf;
+}
+
+aside {
+    background-color: cornflowerblue;
+    grid-area: a;
+}
+
+footer {
+    background-color: darkred;
+    grid-area: f;
+}
